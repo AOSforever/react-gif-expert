@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from 'prop-types';
 
 export const AddCategory = ( { onNewCategory } ) => {
-    const [inputValue, setInputValue] = useState('Search Gifs');
+    const [inputValue, setInputValue] = useState('');
     const onChangeValue = ({target}) => setInputValue(target.value);
     const onSubmit = event => {
         event.preventDefault();
@@ -11,7 +11,7 @@ export const AddCategory = ( { onNewCategory } ) => {
         setInputValue('');
     };
   return (
-    <form onSubmit={ onSubmit }>
+    <form onSubmit={ onSubmit } aria-label="cachudo">
         <input 
             type="text" 
             placeholder="Buscar Gifs"

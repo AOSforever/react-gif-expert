@@ -6,10 +6,8 @@ export const useFetchGifs = ( category ) => {
     const [loading, setLoading] = useState(true);
 
     
-    const giveImage = () => { // CAMBIA LOS ESTADOS
-// GetGifs -> Una función que retorna una promesa y resuelve una API
+    const giveImage = () => { 
         getGifs( category ).then( newImages => {
-// REACT re-renderiza una sola vez 
             setImages( newImages );
             setLoading( false )
         })
